@@ -1,6 +1,6 @@
 output "password" {
   description = "Grafana admin password"
-  value       = random_string.password.result
+  value       = random_password.password.result
   sensitive   = true
 }
 

@@ -20,7 +20,7 @@ data "helm_repository" "sbp" {
 }
 
 resource "helm_release" "prometheus-operator-init" {
-  depends_on = [kubernetes_namespace.saas-monitoring]
+  depends_on = [kubernetes_namespace.prometheus]
   name       = "prometheus-operator-init"
   namespace  = var.namespace
   chart      = "sbp/prometheus-operator-init"
